@@ -1,4 +1,4 @@
-let name = 'Taylor Dorsett'
+let firstName = 'Taylor'
+let lastName = 'Dorsett'
 
-console.log(name)
-
+console.log(firstName + " " + lastName)
