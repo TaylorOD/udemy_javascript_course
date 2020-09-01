@@ -16,14 +16,6 @@ let otherValue = square(10)
 console.log(value)
 console.log(otherValue)
 
-// chllenge area
-
-// convert FahrenheitToCelsius
-
-// call a couple of times (32 -> 0) (68 -> 20)
-
-// print the converted values
-
 let fahrenheitToCelsius = function (num) {
   let result = (num - 32) / 1.8
   return result
