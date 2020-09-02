@@ -23,9 +23,17 @@
 // total for bill, tipPercent .5 .1 or .2 tip (5%, 10%, or 20%)
 
 
-let bill = function (total = 0, tip = total * .1) {
-  return "The total cost is " + total + " and you should tip " + tip + "."
+// let bill = function (total = 0, tip = total * .1) {
+//   return "The total cost is " + total + " and you should tip " + tip + "."
+// }
+
+// let tipAmmounts = bill(595,)
+// console.log(tipAmmounts)
+
+
+let getTip = function (total, tipPercent = .2) {
+  return total * tipPercent
 }
 
-let tipAmmounts = bill(595,)
-console.log(tipAmmounts)
+let tip = getTip(100, .5)
+console.log(tip)
