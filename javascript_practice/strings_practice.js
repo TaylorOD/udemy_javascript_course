@@ -30,10 +30,17 @@
 
 // # 5. Write a program that sotres a varible as a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
 
-let password = "Joshua"
+// let password = "Joshua"
 
-if (password === "Joshua") {
-  console.log("Shall we play a game?")
-} else {
-  console.log("Access denied.")
-}
+// if (password === "Joshua") {
+//   console.log("Shall we play a game?")
+// } else {
+//   console.log("Access denied.")
+// }
+
+// 6. Write a program that uses variables to store a movies's title and lead actor, then prints out a sentence using that information with string concatenation (the + operator).
+
+let movieTitle = "Jurassic Park"
+let movieLeadActor = "Jeff Goldblum"
+
+console.log("Do you want to watch " + movieTitle + " staring " + movieLeadActor + " tonight?")
