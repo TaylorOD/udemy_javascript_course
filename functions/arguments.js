@@ -31,9 +31,15 @@
 // console.log(tipAmmounts)
 
 
-let getTip = function (total, tipPercent = .2) {
-  return total * tipPercent
-}
+// let getTip = function (total, tipPercent = .2) {
+//   return total * tipPercent
+// }
 
-let tip = getTip(100, .5)
-console.log(tip)
+// let tip = getTip(100, .5)
+// console.log(tip)
+
+let name = "Taylor"
+
+console.log(`Hey, my name is ${name}`)
+
+g
