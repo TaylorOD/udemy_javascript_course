@@ -40,7 +40,25 @@
 
 // 6. Write a program that uses variables to store a movies's title and lead actor, then prints out a sentence using that information with string concatenation (the + operator).
 
-let movieTitle = "Jurassic Park"
-let movieLeadActor = "Jeff Goldblum"
+// let movieTitle = "Jurassic Park"
+// let movieLeadActor = "Jeff Goldblum"
 
-console.log("Do you want to watch " + movieTitle + " staring " + movieLeadActor + " tonight?")
+// console.log("Do you want to watch " + movieTitle + " staring " + movieLeadActor + " tonight?")
+
+//  7. Write a program that stores a varible as a name. If the name is "Santa", print "Presents!". If the name is not "Santa", print "You're not Santa."
+
+// let name = "Santa"
+
+// if (name === "Santa") {
+//   console.log("Presents!")
+// } else {
+//   console.log("You're not Santa.")
+// }
+
+// 8. Write a program that uses variables to store three different website URL's, then prints out a sentence using the URL's with string concatenation (the + operator).
+
+let websiteOne = "www.reddit.com"
+let websiteTwo = "www.twitter.com"
+let websiteThree = "www.google.com"
+
+console.log("My favorite websites are " + websiteOne + " and " + websiteTwo + " but the most useful website is " + websiteThree + ".")
