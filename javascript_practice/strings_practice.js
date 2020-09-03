@@ -38,7 +38,7 @@
 //   console.log("Access denied.")
 // }
 
-// 6. Write a program that uses variables to store a movies's title and lead actor, then prints out a sentence using that information with string concatenation (the + operator).
+// 6. Write a program that uses variables to store a movies's title and lead actor, then prints out a sentence using that information using string concatenation (the + operator).
 
 // let movieTitle = "Jurassic Park"
 // let movieLeadActor = "Jeff Goldblum"
@@ -55,10 +55,25 @@
 //   console.log("You're not Santa.")
 // }
 
-// 8. Write a program that uses variables to store three different website URL's, then prints out a sentence using the URL's with string concatenation (the + operator).
+// 8. Write a program that uses variables to store three different website URL's, then prints out a sentence using the URL's using string concatenation (the + operator).
 
-let websiteOne = "www.reddit.com"
-let websiteTwo = "www.twitter.com"
-let websiteThree = "www.google.com"
+// let websiteOne = "www.reddit.com"
+// let websiteTwo = "www.twitter.com"
+// let websiteThree = "www.google.com"
 
-console.log("My favorite websites are " + websiteOne + " and " + websiteTwo + " but the most useful website is " + websiteThree + ".")
+// console.log("My favorite websites are " + websiteOne + " and " + websiteTwo + " but the most useful website is " + websiteThree + ".")
+
+// 9. Write a program that stores a varible. If the varible is "marco", print "polo".
+
+// let name = "marco"
+
+// if (name === "marco") {
+//   console.log("polo")
+// }
+
+//  10. Write a program that uses variables to store a coffee order and price, then prints the coffe order and price in one line using string concatenation (the + operator).
+
+let coffeeOrder = "One Large Black Coffee"
+let price = 4.95
+
+console.log("Your total for " + coffeeOrder + " is " + price + ".")
