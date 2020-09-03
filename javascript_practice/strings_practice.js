@@ -5,19 +5,25 @@
 
 // console.log("My name is " + firstName + " " + lastName + ".")
 
-//  2. Write a program that uses variables to store a first and last name, then prints the full name in one line using string concatenation (the + operator).
+//  2. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string concatenation (the + operator).
 
-// let firstName = "Taylor"
-// let lastName = "Dorsett"
+// let colorOne = "Red"
+// let colorTwo = "Blue"
+// let colorThree = "Green"
 
-// console.log("My name is " + firstName + " " + lastName + ".")
+// console.log("I like " + colorOne + ", " + colorTwo + ", and " + colorThree + ".")
 
-// 3. Write a program that asks the user to input a word. If the word is "marco", print "polo".
+//  3. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string concatenation (the + operator).
 
-// let userInput = gets.chomp
+// let bookTitle = "Catcher in the Rye"
+// let bookAuthor = "J.D. Salinger"
 
-// if (userInput < "marco") {
-//   console.log("polo")
-// }
+// console.log("In high school I read " + bookAuthor + "'s " + bookTitle + " and enjoyed it.")
 
-// JavaScript doesnt make it easy to do gets.chomp or interpolation like ruby does
+//  4. Write a program that uses variables to store the names of three cities, then prints out a sentence using that information with string concatenation (the + operator).
+
+let cityOne = "Burlington"
+let cityTwo = "Rodchester"
+let cityThree = "Middleton"
+
+console.log("I have been to " + cityOne + ", " + cityTwo + ", and " + cityThree + ".")
