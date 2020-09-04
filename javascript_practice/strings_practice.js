@@ -28,7 +28,7 @@ let cityThree = "Middleton"
 
 console.log("I have been to " + cityOne + ", " + cityTwo + ", and " + cityThree + ".")
 
-// # 5. Write a program that sotres a varible as a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
+// # 5. Write a program that stores a varible as a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
 
 let password = "Joshua"
 

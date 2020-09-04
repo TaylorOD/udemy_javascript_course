@@ -21,8 +21,41 @@
 
 //  4. Write a program that uses variables to store the names of three cities, then prints out a sentence using that information with string concatenation (the + operator).
 
-let cityOne = "Chicago"
-let cityTwo = "Atlanta"
-let cityThree = "Denver"
+// let cityOne = "Chicago"
+// let cityTwo = "Atlanta"
+// let cityThree = "Denver"
 
-console.log("I'd rather live in " + cityOne + " or " + cityThree + " than " + cityTwo + ".")
+// console.log("I'd rather live in " + cityOne + " or " + cityThree + " than " + cityTwo + ".")
+
+// # 5. Write a program that stores a varible as a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
+
+// let password = "Joshua"
+
+// if (password === "Joshua") {
+//   console.log("Shall we play a game?")
+// } else {
+//   console.log("Access denied.")
+// }
+
+// 6. Write a program that uses variables to store a movies's title and lead actor, then prints out a sentence using that information using string concatenation (the + operator).
+
+// let movieTitle = "Castaway"
+// let movieStar = "Wilson"
+
+// console.log(`Once the lead character in ${movieTitle}, ${movieStar}, drowns I almost left the movie theater.`)
+
+// 7. Write a program that uses variables to store three different colors, then prints out a sentence using that information with template strings (the ${} operator).
+
+// let colorOne = "Red"
+// let colorTwo = "Blue"
+// let colorThree = "Black"
+
+// console.log(`The outfit I chose was wrong. My hat was ${colorTwo}, shirt ${colorThree}, and pants ${colorOne}.`)
+
+// 8. Write a program that uses variables to store three different website URL's, then prints out a sentence using the URL's using string concatenation (the + operator).
+
+let websiteOne = "hackernews.com"
+let websiteTwo = "twitter.com"
+let websiteThree = "facebook.com"
+
+console.log("Most people on " + websiteOne + " hate " + websiteThree + " but still like " + websiteTwo + ".")
