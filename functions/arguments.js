@@ -39,14 +39,14 @@
 // let tip = getTip(40, .25)
 // console.log(`You should leave a tip for the amount of: $${tip} dollars.`)
 
-let getTip = function (total, tipPercent = .2) {
-  let percent = tipPercent
-  let tip = total * tipPercent
-  return `A ${percent}% tip on $${total} would be $${tip}`
-}
+// let getTip = function (total, tipPercent = .2) {
+//   let percent = tipPercent
+//   let tip = total * tipPercent
+//   return `A ${percent}% tip on $${total} would be $${tip}`
+// }
 
-let tip = getTip(40, .25)
-console.log(tip)
+// let tip = getTip(40, .25)
+// console.log(tip)
 
 // let name = "Taylor"
 
