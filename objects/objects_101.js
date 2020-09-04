@@ -27,3 +27,7 @@ let myInfo = {
 }
 
 console.log(`My name is ${myInfo.name}, I am ${myInfo.age} and I live in ${myInfo.city}.`)
+
+myInfo.age = 29
+
+console.log(`My name is ${myInfo.name}, I am ${myInfo.age} and I live in ${myInfo.city}.`)
