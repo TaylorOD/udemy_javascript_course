@@ -54,8 +54,22 @@
 
 // 8. Write a program that uses variables to store three different website URL's, then prints out a sentence using the URL's using string concatenation (the + operator).
 
-let websiteOne = "hackernews.com"
-let websiteTwo = "twitter.com"
-let websiteThree = "facebook.com"
+// let websiteOne = "hackernews.com"
+// let websiteTwo = "twitter.com"
+// let websiteThree = "facebook.com"
 
-console.log("Most people on " + websiteOne + " hate " + websiteThree + " but still like " + websiteTwo + ".")
+// console.log("Most people on " + websiteOne + " hate " + websiteThree + " but still like " + websiteTwo + ".")
+
+//  9. Write a program that uses variables to store a coffee order and price, then prints the coffe order and price in one line using string concatenation (the + operator).
+
+// let order = "Black Coffee"
+// let price = 3.50
+
+// console.log("Your " + order + " will cost $" + price + ".")
+
+//  10. Write a program that uses variables to store a tea order and price, then prints the tea order and price in one line using template strings (the ${} operator).
+
+let teaOrder = "Earl Gray"
+let price = 2.50
+
+console.log(`Your hot ${teaOrder} will be $${price}.`)
