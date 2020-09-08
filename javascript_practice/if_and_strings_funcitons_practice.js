@@ -53,10 +53,49 @@
 
 // # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
 
-let stringsCombined = function (s1, s2, s3) {
-  return s1 + " " + s2 + " " + s3
+// let stringsCombined = function (s1, s2, s3) {
+//   return s1 + " " + s2 + " " + s3
+// }
+
+// let callFunction = stringsCombined("tomato", "bacon", "bread")
+
+// console.log(callFunction)
+
+// # 7. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
+
+// let averageSum = function (n1, n2, n3) {
+//   return (n1 + n2 + n3) / 3
+// }
+
+// let grade = averageSum(95, 86, 75)
+
+// console.log(grade)
+
+// # 8. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+
+// let timesTenPlusThirty = function (number) {
+//   return (number * 10) + 30
+// }
+
+// let ninthProblem = timesTenPlusThirty(150)
+
+// console.log(ninthProblem)
+
+// # 9. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
+
+// let firstStringFinder = function (string) {
+//   return string[0]
+// }
+
+// let salad = firstStringFinder("salad")
+
+// console.log(salad)
+
+// # 10. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
+
+let allCaps = function (string) {
+  return string.toUpperCase()
 }
+let booger = allCaps("booger")
 
-let callFunction = stringsCombined("tomato", "bacon", "bread")
-
-console.log(callFunction)
+console.log(booger)
