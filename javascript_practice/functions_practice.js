@@ -1,14 +1,20 @@
 // 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
 
-let timesTwo = function (n1) {
-  return n1 * n1
-}
+// let timesTwo = function (n1) {
+//   return n1 * n1
+// }
 
-let multiply = timesTwo(1009)
-console.log(multiply)
+// let multiply = timesTwo(1009)
+// console.log(multiply)
 
 
 //   2. Write a function that takes in a string and returns the string with all capital letters.Then run the function and print the result.
+
+let allCaps = function (string) {
+  return string.toUpperCase()
+}
+let canYouHearMe = allCaps("can you hear me?")
+console.log(canYouHearMe)
 
 //   3. Write a function that takes in two numbers and returns the first number subtracted by the second.Then run the function and print the result.
 
