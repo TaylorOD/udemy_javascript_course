@@ -1,14 +1,12 @@
 
 
 
-let tempConvert = function (temp) {
-  let farenheit = temp
-  let celsius = (farenheit - 32) / 1.8
-  let kelvin = celsius + 273.15
+let tempConvert = function (farenheit) {
+
   return {
-    farenheit,
-    celsius,
-    kelvin
+    farenheit: farenheit,
+    celsius: (farenheit - 32) / 1.8,
+    kelvin: ((farenheit - 32) / 1.8) + 273.15
   }
 }
 
