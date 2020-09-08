@@ -19,15 +19,16 @@
 
 // increase age by 1 then print message again
 
-let myInfo = {
-  name: "Taylor",
-  age: 28,
-  city: "Chicago"
+// let myInfo = {
+//   name: "Taylor",
+//   age: 28,
+//   city: "Chicago"
 
-}
+// }
 
-console.log(`My name is ${myInfo.name}, I am ${myInfo.age} and I live in ${myInfo.city}.`)
+// console.log(`My name is ${myInfo.name}, I am ${myInfo.age} and I live in ${myInfo.city}.`)
 
-myInfo.age = 29
+// myInfo.age = 29
 
-console.log(`My name is ${myInfo.name}, I am ${myInfo.age} and I live in ${myInfo.city}.`)
+// console.log(`My name is ${myInfo.name}, I am ${myInfo.age} and I live in ${myInfo.city}.`)
+
