@@ -25,8 +25,38 @@
 
 //  3. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string concatenation (the + operator) and a second with template strings.
 
-let bookTitle = "Mooncop"
-let bookAuthor = "Aman"
+// let bookTitle = "Mooncop"
+// let bookAuthor = "Aman"
 
-console.log("I am currently reading " + bookTitle + " by " + bookAuthor + ".")
-console.log(`I am currently reading ${bookTitle} by ${bookAuthor}.`)
+// console.log("I am currently reading " + bookTitle + " by " + bookAuthor + ".")
+// console.log(`I am currently reading ${bookTitle} by ${bookAuthor}.`)
+
+// # 4. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
+
+// let numberTimesNumber = function (number) {
+//   return number * number
+// }
+
+// let tenTimesTen = numberTimesNumber(10)
+
+// console.log(tenTimesTen)
+
+// # 5. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
+
+// let subtractNumbers = function (n1, n2) {
+//   return n1 - n2
+// }
+
+// let firstProblem = subtractNumbers(1000, 50)
+
+// console.log(firstProblem)
+
+// # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
+
+let stringsCombined = function (s1, s2, s3) {
+  return s1 + " " + s2 + " " + s3
+}
+
+let callFunction = stringsCombined("tomato", "bacon", "bread")
+
+console.log(callFunction)
