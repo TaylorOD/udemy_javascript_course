@@ -21,20 +21,18 @@ let resetAccount = function (account) {
 }
 
 let getAccountSummary = function (account) {
-  return `Account for ${account.name} has $${account.income - account.expenses}. $${account.income} in income and $${account.expenses} in expenses.`
+  let balance = account.income - account.expenses
+  return `Account for ${account.name} has $${balance}. $${account.income} in income and $${account.expenses} in expenses.`
 }
 
-addExpense(myAcconut, 2.50)
 addIncome(myAcconut, 500)
 addExpense(myAcconut, 50)
+console.log(myAcconut)
+
 resetAccount(myAcconut)
+
 addIncome(myAcconut, 5000)
 addExpense(myAcconut, 1500)
 
-let taylorAccount = getAccountSummary(myAcconut)
 console.log(myAcconut)
-console.log(taylorAccount)
-
-resetAccount(myAcconut)
-console.log(taylorAccount)
-console.log(myAcconut)
+console.log(getAccountSummary(myAcconut))
