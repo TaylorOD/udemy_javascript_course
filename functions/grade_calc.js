@@ -22,8 +22,8 @@
 //   console.log("You got a F. Please see me after class.")
 // }
 
-let gradeCalc = function (studentScore, maxScore) {
-  let studentGrade = (studentScore / maxScore) * 100
+const gradeCalc = function (studentScore, maxScore) {
+  const studentGrade = (studentScore / maxScore) * 100
   let letterGrade = ""
 
   if (studentGrade >= 90) {
