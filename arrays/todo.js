@@ -9,4 +9,8 @@ todos.shift()
 console.log(`You have ${todos.length} todos.`)
 console.log(todos)
 
+todos.forEach(function (todo, index) {
+  console.log(`${index + 1}. ${todo} `)
 
+
+})
