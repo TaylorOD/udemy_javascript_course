@@ -14,3 +14,8 @@ todos.forEach(function (todo, index) {
 
 
 })
+
+for (let count = 0; count <= todos.length - 1; count++) {
+  console.log(`${count + 1}. ${todos[count]}`)
+
+}
