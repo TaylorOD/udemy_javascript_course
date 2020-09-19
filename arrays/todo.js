@@ -1,8 +1,8 @@
 const todos = ["Practice JavaScript", "Update Resume", "Finish Blog", "Write Write Up", "Send Invoice"]
 
-todos.splice(2, 1)
-todos.push("Make Intro")
-todos.shift()
+// todos.splice(2, 1)
+// todos.push("Make Intro")
+// todos.shift()
 
 
 
@@ -15,7 +15,7 @@ todos.forEach(function (todo, index) {
 
 })
 
-for (let count = 0; count <= todos.length - 1; count++) {
-  console.log(`${count + 1}. ${todos[count]}`)
+// for (let count = 0; count <= todos.length - 1; count++) {
+//   console.log(`${count + 1}. ${todos[count]}`)
 
-}
+// }
