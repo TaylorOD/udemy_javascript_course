@@ -23,16 +23,28 @@ const todos = [{
 
 }]
 
-const deleteTodo = function (todos, todoText) {
-  const index = todos.findIndex(function (todo) {
-    return todo.text.toLowerCase() === todoText.toLowerCase()
-  })
+// const deleteTodo = function (todos, todoText) {
+//   const index = todos.findIndex(function (todo) {
+//     return todo.text.toLowerCase() === todoText.toLowerCase()
+//   })
 
-  if (index > -1) {
-    todos.splice(index, 1)
-  }
+//   if (index > -1) {
+//     todos.splice(index, 1)
+//   }
+
+// }
+
+const getThingsToDo = function (todos) {
+  return todos.filter(function (todo, index) {
+    return !todo.completed
+  })
 
 }
 
-deleteTodo(todos, "Finish Blog")
-console.log(todos)
+
+
+console.log(getThingsToDo(todos))
+
+
+// deleteTodo(todos, "Finish Blog")
+// console.log(todos)
