@@ -34,16 +34,33 @@ const todos = [{
 
 // }
 
-const getThingsToDo = function (todos) {
-  return todos.filter(function (todo, index) {
-    return !todo.completed
+// const getThingsToDo = function (todos) {
+//   return todos.filter(function (todo, index) {
+//     return !todo.completed
+//   })
+
+// }
+
+
+
+// console.log(getThingsToDo(todos))
+
+const sortTodos = function (todos) {
+  todos.sort(function (a, b) {
+    if (!a.completed && b.completed) {
+      return -1
+    } else if (!b.completed && a.completed) {
+      return 1
+    } else {
+      return 0
+    }
+
   })
 
 }
 
-
-
-console.log(getThingsToDo(todos))
+sortTodos(todos)
+console.log(todos)
 
 
 // deleteTodo(todos, "Finish Blog")
