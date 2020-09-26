@@ -47,3 +47,8 @@ const incompleteTodo = todos.filter(function (todo) {
 const summary = document.createElement("h4")
 summary.textContent = `You have ${incompleteTodo.length} todos left`
 document.querySelector("body").appendChild(summary)
+
+
+document.querySelector("button").addEventListener("click", function (e) {
+  e.target.textContent = "Added Todo"
+})
