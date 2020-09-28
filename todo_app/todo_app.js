@@ -49,6 +49,10 @@ summary.textContent = `You have ${incompleteTodo.length} todos left`
 document.querySelector("body").appendChild(summary)
 
 
-document.querySelector("button").addEventListener("click", function (e) {
+document.querySelector("button#add-todo").addEventListener("click", function (e) {
   e.target.textContent = "Added Todo"
+})
+
+document.querySelector("#new-todo-text").addEventListener("input", function (e) {
+  console.log(e.target.value)
 })
