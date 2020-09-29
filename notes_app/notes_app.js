@@ -1,4 +1,3 @@
-
 const notes = [{
   title: "My next Trip",
   body: "I would like to go to Spain"
@@ -33,14 +32,15 @@ const renderNotes = function (notes, filters) {
 
 renderNotes(notes, filters)
 
-document.querySelector("#create-note").addEventListener("click", function (e) {
-  e.target.textContent = "The button was clicked"
-})
-
-document.querySelector("#remove-all").addEventListener("click", function () {
-  document.querySelectorAll(".note").forEach(function (note) {
-    note.remove()
+document.querySelector("#new-note-form").addEventListener("submit", function (e) {
+  e.preventDefault()
+  notes.push({
+    title: e.target.elements.newNote.value,
+    body: ""
   })
+
+  renderNotes(notes, filters)
+  e.target.elements.newNote.value = ""
 })
 
 document.querySelector("#search-text").addEventListener("input", function (e) {

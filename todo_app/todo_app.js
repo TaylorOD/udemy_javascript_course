@@ -49,18 +49,19 @@ const renderTodos = function (todos, filters) {
 
 renderTodos(todos, filters)
 
-// listen for todo text change
-document.querySelector("#new-todo-text").addEventListener("input", function (e) {
-  console.log(e.target.value)
-})
-
-// listen for new todo creation
-document.querySelector("button#add-todo").addEventListener("click", function (e) {
-  e.target.textContent = "Added Todo"
-})
-
 // listens for input text changes and changes filters
 document.querySelector("#search-text").addEventListener("input", function (e) {
   filters.searchText = e.target.value
   renderTodos(todos, filters)
+})
+
+// add new todo - listens to sub box
+document.querySelector("#new-todo-text-form").addEventListener("submit", function (e) {
+  e.preventDefault()
+  todos.push({
+    text: e.target.elements.newTodoText.value,
+    completed: false
+  })
+  renderTodos(todos, filters)
+  e.target.elements.newTodoText.value = ""
 })
