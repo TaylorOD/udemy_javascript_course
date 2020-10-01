@@ -1,20 +1,39 @@
-const notes = [{
-  title: "My next Trip",
-  body: "I would like to go to Spain"
-
-}, {
-  title: "Coding projects",
-  body: "JavaScript and Ruby"
-
-}, {
-  title: "Buy new watch",
-  body: "Gold"
-
-}]
+const notes = [
+  {
+    title: "My next Trip",
+    body: "I would like to go to Spain",
+  },
+  {
+    title: "Coding projects",
+    body: "JavaScript and Ruby",
+  },
+  {
+    title: "Buy new watch",
+    body: "Gold",
+  },
+]
 
 const filters = {
-  searchText: ""
+  searchText: "",
 }
+
+// localStorage.setItem("location", "Philadelphia")
+// console.log(localStorage.getItem("location"))
+// localStorage.removeItem("location")
+// localStorage.clear()
+
+// const user = {
+//   name: "Taylor",
+//   age: 27,
+// }
+// const userJSON = JSON.stringify(user)
+// console.log(userJSON)
+
+// localStorage.setItem("user", userJSON)
+
+const userJSON = localStorage.getItem("user")
+const user = JSON.parse(userJSON)
+console.log(`${user.name} is ${user.age}`)
 
 const renderNotes = function (notes, filters) {
   const filteredNotes = notes.filter(function (note) {
