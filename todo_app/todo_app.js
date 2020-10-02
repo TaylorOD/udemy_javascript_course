@@ -1,37 +1,22 @@
-const todos = [{
-  text: "Practice JavaScript",
-  completed: true
-
-}, {
-  text: "Update Resume",
-  completed: true
-
-}, {
-  text: "Finish Blog",
-  completed: false
-
-}, {
-  text: "Wrtie Write Up",
-  completed: false
-
-}, {
-  text: "Send Invoice",
-  completed: true
-
-}]
+let todos = []
 
 const filters = {
   searchText: "",
   hideCompleted: false
 }
 
+const todosJSON = localStorage.getItem("todos")
+
+if (todosJSON !== null) {
+  todos = JSON.parse(todosJSON)
+}
 
 const renderTodos = function (todos, filters) {
   const filteredTodos = todos.filter(function (todo) {
     const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
-    const hideCompleted = !filters.hideCompleted || !todo.completed
+    const hideCompletedMatch = !filters.hideCompleted || !todo.completed
 
-    return searchTextMatch && hideCompleted
+    return searchTextMatch && hideCompletedMatch
   })
 
   const incompleteTodo = filteredTodos.filter(function (todo) {
@@ -48,7 +33,6 @@ const renderTodos = function (todos, filters) {
     const p = document.createElement("p")
     p.textContent = todo.text
     document.querySelector("#todos").appendChild(p)
-
   })
 }
 
@@ -64,11 +48,12 @@ document.querySelector("#search-text").addEventListener("input", function (e) {
 document.querySelector("#new-todo-text-form").addEventListener("submit", function (e) {
   e.preventDefault()
   todos.push({
-    text: e.target.elements.newTodoText.value,
+    text: e.target.elements.text.value,
     completed: false
   })
+  localStorage.setItem("todos", JSON.stringify(todos))
   renderTodos(todos, filters)
-  e.target.elements.newTodoText.value = ""
+  e.target.elements.text.value = ""
 })
 
 // listens to checkbox - true or false

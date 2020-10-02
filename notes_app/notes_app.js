@@ -1,17 +1,4 @@
-const notes = [
-  {
-    title: "My next Trip",
-    body: "I would like to go to Spain",
-  },
-  {
-    title: "Coding projects",
-    body: "JavaScript and Ruby",
-  },
-  {
-    title: "Buy new watch",
-    body: "Gold",
-  },
-]
+let notes = []
 
 const filters = {
   searchText: "",
@@ -31,9 +18,15 @@ const filters = {
 
 // localStorage.setItem("user", userJSON)
 
-const userJSON = localStorage.getItem("user")
-const user = JSON.parse(userJSON)
-console.log(`${user.name} is ${user.age}`)
+// const userJSON = localStorage.getItem("user")
+// const user = JSON.parse(userJSON)
+// console.log(`${user.name} is ${user.age}`)
+
+const notesJSON = localStorage.getItem("notes")
+
+if (notesJSON != null) {
+  notes = JSON.parse(notesJSON)
+}
 
 const renderNotes = function (notes, filters) {
   const filteredNotes = notes.filter(function (note) {
@@ -44,7 +37,12 @@ const renderNotes = function (notes, filters) {
 
   filteredNotes.forEach(function (note) {
     const noteEl = document.createElement("p")
-    noteEl.textContent = note.title
+
+    if (note.title.length > 0) {
+      noteEl.textContent = note.title
+    } else {
+      noteEl.textContent = "Unnamed Note"
+    }
     document.querySelector("#notes").appendChild(noteEl)
   })
 }
@@ -54,13 +52,22 @@ renderNotes(notes, filters)
 // document.querySelector("#new-note-form").addEventListener("submit", function (e) {
 //   e.preventDefault()
 //   notes.push({
-//     title: e.target.elements.newNote.value,
+// title: e.target.elements.newNote.value,
 //     body: ""
 //   })
 
 //   renderNotes(notes, filters)
 //   e.target.elements.newNote.value = ""
 // })
+
+document.querySelector("#create-note").addEventListener("click", function (e) {
+  notes.push({
+    title: "",
+    body: "",
+  })
+  localStorage.setItem("notes", JSON.stringify(notes))
+  renderNotes(notes, filters)
+})
 
 document.querySelector("#search-text").addEventListener("input", function (e) {
   filters.searchText = e.target.value
