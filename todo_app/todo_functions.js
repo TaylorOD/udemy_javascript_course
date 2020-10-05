@@ -16,15 +16,28 @@ const saveTodos = function (todos) {
 }
 
 // Generate DOM Elements for todos
-
 const generateTodoDOM = function (todo) {
-  const p = document.createElement("p")
-  p.textContent = todo.text
-  return p
+  const todoEl = document.createElement("div")
+  const textEl = document.createElement("span")
+  const removeButton = document.createElement("button")
+  const checkbox = document.createElement("input")
+
+  // create checkbox for each
+  checkbox.setAttribute("type", "checkbox")
+  todoEl.appendChild(checkbox)
+
+  // set todo text
+  textEl.textContent = todo.text
+  todoEl.appendChild(textEl)
+
+  // create x/remove button for each todo
+  removeButton.textContent = "x"
+  todoEl.appendChild(removeButton)
+
+  return todoEl
 }
 
 // Render application todos
-
 const renderTodos = function (todos, filters) {
   const filteredTodos = todos.filter(function (todo) {
     const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
@@ -33,6 +46,7 @@ const renderTodos = function (todos, filters) {
     return searchTextMatch && hideCompletedMatch
   })
 
+  // return incompleted todos
   const incompleteTodo = filteredTodos.filter(function (todo) {
     return !todo.completed
   })
