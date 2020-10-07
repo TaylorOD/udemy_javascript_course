@@ -1,3 +1,5 @@
+/* global todos, filters */
+
 // read existing notes from localstorage
 const getSavedTodos = function () {
   const todosJSON = localStorage.getItem("todos")
@@ -13,6 +15,18 @@ const getSavedTodos = function () {
 // save todos to local storage
 const saveTodos = function (todos) {
   localStorage.setItem("todos", JSON.stringify(todos))
+}
+
+// remove Todo using X button
+const removeTodo = function (id) {
+  const todoIndex = todos.findIndex(function (todo) {
+    return todo.id === id
+  })
+
+  if (todoIndex > -1) {
+    todos.splice(todoIndex, 1)
+  }
+
 }
 
 // Generate DOM Elements for todos
@@ -33,6 +47,11 @@ const generateTodoDOM = function (todo) {
   // create x/remove button for each todo
   removeButton.textContent = "x"
   todoEl.appendChild(removeButton)
+  removeButton.addEventListener("click", function () {
+    removeTodo(todo.id)
+    saveTodos(todos)
+    renderTodos(todos, filters)
+  })
 
   return todoEl
 }
