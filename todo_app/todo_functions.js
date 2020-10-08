@@ -11,7 +11,6 @@ const getSavedTodos = function () {
   }
 }
 
-
 // save todos to local storage
 const saveTodos = function (todos) {
   localStorage.setItem("todos", JSON.stringify(todos))
@@ -26,7 +25,17 @@ const removeTodo = function (id) {
   if (todoIndex > -1) {
     todos.splice(todoIndex, 1)
   }
+}
 
+// change if todo completed or not using checkbox
+const toggleCompleted = function (id) {
+  const todo = todos.find(function (todo) {
+    return todo.id === id
+  })
+
+  if (todo !== undefined) {
+    todo.completed = !todo.completed
+  }
 }
 
 // Generate DOM Elements for todos
@@ -38,7 +47,14 @@ const generateTodoDOM = function (todo) {
 
   // create checkbox for each
   checkbox.setAttribute("type", "checkbox")
+  checkbox.checked = todo.completed
   todoEl.appendChild(checkbox)
+  checkbox.addEventListener("change", function () {
+    toggleCompleted(todo.id)
+    saveTodos(todos)
+    renderTodos(todos, filters)
+  })
+
 
   // set todo text
   textEl.textContent = todo.text
@@ -73,7 +89,6 @@ const renderTodos = function (todos, filters) {
   document.querySelector("#todos").innerHTML = ""
   document.querySelector("#todos").appendChild(generateSummaryDOM(incompleteTodo))
 
-
   filteredTodos.forEach(function (todo) {
     document.querySelector("#todos").appendChild(generateTodoDOM(todo))
   })
@@ -82,7 +97,6 @@ const renderTodos = function (todos, filters) {
 // generate summary
 
 const generateSummaryDOM = function (incompleteTodo) {
-
   const summary = document.createElement("h4")
   summary.textContent = `You have ${incompleteTodo.length} todos left`
   return summary
