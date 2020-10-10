@@ -1,5 +1,7 @@
 /* global getSavedNotes */
 
+const titleEl = document.querySelector("#note_title")
+const bodyEl = document.querySelector("#note_body")
 const noteID = location.hash.substring(1)
 const notes = getSavedNotes()
 const note = notes.find(function (note) {
@@ -7,12 +9,23 @@ const note = notes.find(function (note) {
 })
 
 if (note === undefined) {
-  location.assign("/index.html")
+  location.assign("index.html")
 }
 
-document.querySelector("#note_title").value = note.title
-document.querySelector("#note_body").value = note.body
+titleEl.value = note.title
+bodyEl.value = note.body
 
+// save new title for note to local storage using edit page
+titleEl.addEventListener("input", function (e) {
+  note.title = e.target.value
+  saveNotes(notes)
+})
+
+// save new body for note to local storage using edit page
+bodyEl.addEventListener("input", function (e) {
+  note.body = e.target.value
+  saveNotes(notes)
+})
 
 
 
@@ -21,5 +34,5 @@ document.querySelector("#note_body").value = note.body
 document.querySelector("#remove_note").addEventListener("click", function () {
   removeNote(note.id)
   saveNotes(notes)
-  location.assign("/index.html")
+  location.assign("index.html")
 })

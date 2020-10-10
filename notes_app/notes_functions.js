@@ -49,7 +49,7 @@ const generateNoteDom = function (note) {
   } else {
     textEl.textContent = "Unnamed Note"
   }
-  textEl.setAttribute("href", `/edit.html#${note.id}`)
+  textEl.setAttribute("href", `edit.html#${note.id}`)
   noteEl.appendChild(textEl)
 
   return noteEl
