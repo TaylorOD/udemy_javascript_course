@@ -2,6 +2,7 @@
 
 const titleEl = document.querySelector("#note_title")
 const bodyEl = document.querySelector("#note_body")
+const removeEl = document.querySelector("#remove_note")
 const noteID = location.hash.substring(1)
 const notes = getSavedNotes()
 const note = notes.find(function (note) {
@@ -31,7 +32,7 @@ bodyEl.addEventListener("input", function (e) {
 
 
 // remove note on edit page and redirect to home page
-document.querySelector("#remove_note").addEventListener("click", function () {
+removeEl.addEventListener("click", function () {
   removeNote(note.id)
   saveNotes(notes)
   location.assign("index.html")
