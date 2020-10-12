@@ -35,14 +35,6 @@ window.addEventListener("storage", function (e) {
 })
 
 // const now = new Date("January 21 2001 6:25:01")
-// const timestamp = now.getTime()
-
-// const myDate = new Date(timestamp)
-
-// console.log(myDate.getFullYear())
-
-// console.log(now.toString())
-// console.log(now.getTime())
 
 // console.log(`Year: ${now.getFullYear()}`)
 // console.log(`Month: ${now.getMonth()}`)
