@@ -69,3 +69,9 @@ const renderNotes = function (notes, filters) {
     document.querySelector("#notes").appendChild(noteEl)
   })
 }
+
+// Creates a timestamp for each new note
+const createdAt = moment().valueOf()
+
+// Updates timestamp for each note when edited
+let updatedAt = moment().valueOf()

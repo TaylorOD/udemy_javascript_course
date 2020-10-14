@@ -12,6 +12,8 @@ document.querySelector("#create-note").addEventListener("click", function (e) {
     id: id,
     title: "",
     body: "",
+    createdAt: createdAt,
+    updatedAt: updatedAt,
   })
   saveNotes(notes)
   location.assign(`edit.html#${id}`)
@@ -33,19 +35,3 @@ window.addEventListener("storage", function (e) {
     renderNotes(notes, filters)
   }
 })
-
-const now = moment()
-// now.add(1, "week").subtract(10, "days")
-console.log(now.format("MMMM Do, YYYY"))
-console.log(now.fromNow())
-// this allows us to set the date created as something then say when that when or roughly how long ago it was
-
-const nowTimeStamp = now.valueOf()
-console.log(nowTimeStamp)
-console.log(moment(nowTimeStamp).toString())
-
-const birthday = moment()
-// console.log(birthday.subtract(5, "month").add(7, "days"))
-
-birthday.year(1992).month(4).day(10)
-console.log(birthday.format("MMM D, YYYY"))
