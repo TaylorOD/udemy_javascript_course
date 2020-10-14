@@ -19,14 +19,14 @@ bodyEl.value = note.body
 // save new title for note to local storage using edit page
 titleEl.addEventListener("input", function (e) {
   note.title = e.target.value
-  note.updatedAt = updatedAt
+  note.updatedAt = moment().valueOf()
   saveNotes(notes)
 })
 
 // save new body for note to local storage using edit page
 bodyEl.addEventListener("input", function (e) {
   note.body = e.target.value
-  note.updatedAt = updatedAt
+  note.updatedAt = moment().valueOf()
   saveNotes(notes)
 })
 
