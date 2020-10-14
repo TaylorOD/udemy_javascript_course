@@ -16,14 +16,14 @@ if (note === undefined) {
 }
 
 titleEl.value = note.title
-updatedAtEl.textContent = `Last edited ${moment(note.updatedAt).fromNow()}`
+updatedAtEl.textContent = updateLastEdited(note.updatedAt)
 bodyEl.value = note.body
 
 // save new title for note to local storage using edit page
 titleEl.addEventListener("input", function (e) {
   note.title = e.target.value
   note.updatedAt = moment().valueOf()
-  updatedAtEl.textContent = `Last edited ${moment(note.updatedAt).fromNow()}`
+  updatedAtEl.textContent = updateLastEdited(note.updatedAt)
   saveNotes(notes)
 })
 
@@ -31,7 +31,7 @@ titleEl.addEventListener("input", function (e) {
 bodyEl.addEventListener("input", function (e) {
   note.body = e.target.value
   note.updatedAt = moment().valueOf()
-  updatedAtEl.textContent = `Last edited ${moment(note.updatedAt).fromNow()}`
+  updatedAtEl.textContent = updateLastEdited(note.updatedAt)
   saveNotes(notes)
 })
 
@@ -56,7 +56,7 @@ window.addEventListener("storage", function (e) {
 
     titleEl.value = note.title
     updatedAtEl.value = note.updatedAt
-    updatedAtEl.textContent = `Last edited ${moment(note.updatedAt).fromNow()}`
+    updatedAtEl.textContent = updateLastEdited(note.updatedAt)
     bodyEl.value = note.body
   }
 })
