@@ -8,13 +8,13 @@ const filters = {
 renderTodos(todos, filters)
 
 // listens for input text changes and changes filters
-document.querySelector("#search-text").addEventListener("input", function (e) {
+document.querySelector("#search-text").addEventListener("input", (e) => {
   filters.searchText = e.target.value
   renderTodos(todos, filters)
 })
 
 // add new todo - listens to sub box
-document.querySelector("#new-todo-text-form").addEventListener("submit", function (e) {
+document.querySelector("#new-todo-text-form").addEventListener("submit", (e) => {
   e.preventDefault()
   todos.push({
     id: uuidv4(),
@@ -27,7 +27,7 @@ document.querySelector("#new-todo-text-form").addEventListener("submit", functio
 })
 
 // listens to checkbox - true or false
-document.querySelector("#completed-checkbox").addEventListener("change", function (e) {
+document.querySelector("#completed-checkbox").addEventListener("change", (e) => {
   filters.hideCompleted = e.target.checked
   renderTodos(todos, filters)
 })
