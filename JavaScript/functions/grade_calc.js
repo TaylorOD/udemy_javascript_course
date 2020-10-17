@@ -23,6 +23,10 @@
 // }
 
 const gradeCalc = function (studentScore, maxScore) {
+  
+  if (typeof studentScore !== "number" || typeof maxScore !== "number") {
+    throw Error("Inputs must both be numbers!")
+  }
   const studentGrade = (studentScore / maxScore) * 100
   let letterGrade = ""
 
@@ -37,7 +41,12 @@ const gradeCalc = function (studentScore, maxScore) {
   } else {
     letterGrade = "F"
   }
-  console.log(`You got an ${letterGrade}. (${studentGrade}%)`)
+  return (`You got an ${letterGrade}. (${studentGrade}%)`)
 }
 
-gradeCalc(75, 100)
+try {
+  const result = gradeCalc("purple", 100)
+  console.log(result)
+} catch (e) {
+  console.log(e.message)
+}
