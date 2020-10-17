@@ -1,4 +1,5 @@
 /* global getSavedNotes, updateLastEdited, removeNote, saveNotes, moment, updatedAt */
+"use strict"
 
 const titleEl = document.querySelector("#note_title")
 const bodyEl = document.querySelector("#note_body")

@@ -1,4 +1,5 @@
 /* global getSavedNotes, updateLastEdited, removeNote, saveNotes, moment, updatedAt, notes, filters, renderNotes, uuidv4 */
+"use strict"
 
 let notes = getSavedNotes()
 

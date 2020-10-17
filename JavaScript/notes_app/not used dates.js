@@ -1,3 +1,5 @@
+"use strict"
+
 const now = new Date("January 21 2001 6:25:01")
 
 // console.log(`Year: ${now.getFullYear()}`)

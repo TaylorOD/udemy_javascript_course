@@ -1,4 +1,5 @@
 /* global todos, filters */
+"use strict"
 
 // read existing notes from localstorage
 const getSavedTodos = () => {
