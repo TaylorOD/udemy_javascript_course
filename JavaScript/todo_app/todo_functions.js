@@ -3,7 +3,12 @@
 // read existing notes from localstorage
 const getSavedTodos = () => {
   const todosJSON = localStorage.getItem("todos")
-  return todosJSON ? JSON.parse(todosJSON) : []
+// prevents the app from crashing if the data from local storage isnt being read correctly
+  try {
+    return todosJSON ? JSON.parse(todosJSON) : []
+  } catch (e) {
+    return []
+  }
 }
 
 // save todos to local storage
