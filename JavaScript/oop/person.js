@@ -1,5 +1,3 @@
-// Prototypal Inheritance - 
-
 const Person = function (firstName, lastName, age, likes = []) {
   this.firstName = firstName  
   this.lastName = lastName
