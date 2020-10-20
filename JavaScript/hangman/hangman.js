@@ -49,3 +49,10 @@ console.log(hangmanTwo.getPuzzle())
 console.log(hangmanTwo.allowedGuesses)
 // guess w
 // console.log(hangmanTwo.getPuzzle()) **w *****
+
+window.addEventListener("keypress", function (e) {
+  const guess = String.fromCharCode(e.charCode)
+  hangmanTwo.makeGuess(guess)
+  console.log(hangmanTwo.getPuzzle())
+  console.log(hangmanTwo.allowedGuesses)
+})
