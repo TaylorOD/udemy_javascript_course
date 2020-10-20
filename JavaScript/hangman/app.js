@@ -1,6 +1,7 @@
-const product = {
-  name: "The Moon is a Harsh Mistress"
-}
+// Primitive value: string, number , boolean, null, undefined - everything not in this list is an object
 
-console.log(product.hasOwnProperty("name"))
-console.log(product)
+// myObject -> Object.prototype -> null
+// Array: myArray -> Array.prototype ->  Object.prototype -> null
+
+const team = ["Taylor", "Todd"]
+console.log(team)
