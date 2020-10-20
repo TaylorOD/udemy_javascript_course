@@ -12,8 +12,6 @@ Person.prototype.getBio = function () {
     bio += ` ${this.firstName} likes ${like}.`
   })
 
-
-
   return bio
 }
 
@@ -22,7 +20,6 @@ Person.prototype.setName = function (fullName) {
   this.firstName = names[0]
   this.lastName = names[1]
 }
-
 
 const me = new Person("Taylor", "Dorsett", 28, ["Climbing", "Walking"])
 me.setName("Tanner Johnson")
