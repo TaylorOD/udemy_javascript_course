@@ -34,25 +34,25 @@ Hangman.prototype.makeGuess = function (guess) {
 
 
 
-const hangmanOne = new Hangman("cat", 3)
-// guess c, t, z
-hangmanOne.makeGuess("a")
-hangmanOne.makeGuess("t")
-hangmanOne.makeGuess("z")
-hangmanOne.makeGuess("s")
-console.log(hangmanOne.getPuzzle()) //c*t
-console.log(hangmanOne.allowedGuesses)
-// print remaining guesses (should be 1)
-const hangmanTwo = new Hangman("New Jersey", 8)
-hangmanTwo.makeGuess("w")
-console.log(hangmanTwo.getPuzzle())
-console.log(hangmanTwo.allowedGuesses)
-// guess w
-// console.log(hangmanTwo.getPuzzle()) **w *****
+// const hangmanOne = new Hangman("cat", 3)
+// // guess c, t, z
+// hangmanOne.makeGuess("a")
+// hangmanOne.makeGuess("t")
+// hangmanOne.makeGuess("z")
+// hangmanOne.makeGuess("s")
+// console.log(hangmanOne.getPuzzle()) //c*t
+// console.log(hangmanOne.allowedGuesses)
+// // print remaining guesses (should be 1)
+// const hangmanTwo = new Hangman("New Jersey", 8)
+// hangmanTwo.makeGuess("w")
+// console.log(hangmanTwo.getPuzzle())
+// console.log(hangmanTwo.allowedGuesses)
+// // guess w
+// // console.log(hangmanTwo.getPuzzle()) **w *****
 
-window.addEventListener("keypress", function (e) {
-  const guess = String.fromCharCode(e.charCode)
-  hangmanTwo.makeGuess(guess)
-  console.log(hangmanTwo.getPuzzle())
-  console.log(hangmanTwo.allowedGuesses)
-})
+// window.addEventListener("keypress", function (e) {
+//   const guess = String.fromCharCode(e.charCode)
+//   hangmanTwo.makeGuess(guess)
+//   console.log(hangmanTwo.getPuzzle())
+//   console.log(hangmanTwo.allowedGuesses)
+// })

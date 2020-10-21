@@ -10,8 +10,31 @@
 // Number: myNumber -> Number.prototype  -> Object.prototype -> null
 // Boolean: myBoolean -> Boolean.prototype -> Object.prototype -> null
 
-const product = "computer"
-console.log(product.split(""))
+// const product = "computer"
+// console.log(product.split(""))
 
-const otherProduct = new String("Phone")
-console.log(otherProduct)
+// const otherProduct = new String("Phone")
+// console.log(otherProduct)
+
+const hangmanOne = new Hangman("cat", 3)
+// guess c, t, z
+hangmanOne.makeGuess("a")
+hangmanOne.makeGuess("t")
+hangmanOne.makeGuess("z")
+hangmanOne.makeGuess("s")
+console.log(hangmanOne.getPuzzle()) //c*t
+console.log(hangmanOne.allowedGuesses)
+// print remaining guesses (should be 1)
+const hangmanTwo = new Hangman("New Jersey", 8)
+hangmanTwo.makeGuess("w")
+console.log(hangmanTwo.getPuzzle())
+console.log(hangmanTwo.allowedGuesses)
+// guess w
+// console.log(hangmanTwo.getPuzzle()) **w *****
+
+window.addEventListener("keypress", function (e) {
+  const guess = String.fromCharCode(e.charCode)
+  hangmanTwo.makeGuess(guess)
+  console.log(hangmanTwo.getPuzzle())
+  console.log(hangmanTwo.allowedGuesses)
+})
