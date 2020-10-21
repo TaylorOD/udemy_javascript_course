@@ -10,11 +10,7 @@
 // Number: myNumber -> Number.prototype  -> Object.prototype -> null
 // Boolean: myBoolean -> Boolean.prototype -> Object.prototype -> null
 
-// const product = "computer"
-// console.log(product.split(""))
-
-// const otherProduct = new String("Phone")
-// console.log(otherProduct)
+// 
 
 const hangmanOne = new Hangman("cat", 3)
 // guess c, t, z
@@ -38,3 +34,5 @@ window.addEventListener("keypress", function (e) {
   console.log(hangmanTwo.getPuzzle())
   console.log(hangmanTwo.allowedGuesses)
 })
+
+renderHangmanGames(hangmanOne.getPuzzle())
