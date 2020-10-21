@@ -31,17 +31,28 @@ Hangman.prototype.makeGuess = function (guess) {
   if (isUnique && isBadGuess) {
     this.allowedGuesses -= 1
   }
+  this.getStatus
 }
 
 Hangman.prototype.getStatus = function () {
   let status = this.status
+  let finished = true
 
   this.word.forEach((letter) => {
-    if (this.guessedLetters.includes(letter) || letter === " ") {
-      status = "finished"
-    } else if (this.allowedGuesses <= 0) {
-      status = "failed"
-    } 
+    if (this.guessedLetters.includes(letter)) {
+      
+    } else {
+      finished = false
+    }
   })
+    
+  if (this.allowedGuesses <= 0) {
+    status = "failed"
+  } else if (finished) {
+    status = "finished"
+  } else {
+    status = "playing"
+  }
+
   return status
 }
