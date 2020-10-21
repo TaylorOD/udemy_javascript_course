@@ -36,3 +36,4 @@ window.addEventListener("keypress", function (e) {
 })
 
 renderHangmanGames(hangmanOne.getPuzzle())
+renderHangmanGuesses(hangmanOne.allowedGuesses)
