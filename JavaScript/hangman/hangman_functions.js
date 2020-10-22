@@ -1,58 +1,69 @@
 const Hangman = function (word, allowedGuesses) {
-  this.word = word.toLowerCase().split("")
-  this.allowedGuesses = allowedGuesses
-  this.guessedLetters = []
-  this.status = "playing"
-}
+  this.word = word.toLowerCase().split("");
+  this.allowedGuesses = allowedGuesses;
+  this.guessedLetters = [];
+  this.status = "playing";
+};
 
 Hangman.prototype.getPuzzle = function () {
-  let puzzle = ""
+  let puzzle = "";
   this.word.forEach((letter) => {
     if (this.guessedLetters.includes(letter) || letter === " ") {
-      puzzle += letter
+      puzzle += letter;
 
     } else {
-      puzzle += "*"
+      puzzle += "*";
 
     }
-  })
-  return puzzle
-}
+  });
+  return puzzle;
+};
 
 Hangman.prototype.makeGuess = function (guess) {
-  guess = guess.toLowerCase()
-  const isUnique = !this.guessedLetters.includes(guess)
-  const isBadGuess = !this.word.includes(guess)
+  if (this.status === "playing") {
+    guess = guess.toLowerCase();
+    const isUnique = !this.guessedLetters.includes(guess);
+    const isBadGuess = !this.word.includes(guess);
 
-  if (isUnique) {
-    this.guessedLetters.push(guess)
+    if (isUnique) {
+      this.guessedLetters.push(guess);
 
-  }  
-  if (isUnique && isBadGuess) {
-    this.allowedGuesses -= 1
+    }  
+    if (isUnique && isBadGuess) {
+      this.allowedGuesses -= 1;
+    }
+    this.getStatus;
   }
-  this.getStatus
-}
+};
 
-Hangman.prototype.getStatus = function () {
-  let status = this.status
-  let finished = true
+Hangman.prototype.calculateStatus = function () {
+  let finished = true;
 
   this.word.forEach((letter) => {
     if (this.guessedLetters.includes(letter)) {
-      
+        
     } else {
-      finished = false
+      finished = false;
     }
-  })
-    
+  });
+      
   if (this.allowedGuesses <= 0) {
-    status = "failed"
+    this.status = "failed";
   } else if (finished) {
-    status = "finished"
+    this.status = "finished";
   } else {
-    status = "playing"
+    this.status = "playing";
   }
 
-  return status
+  return this.status;
+};
+
+Hangman.prototype.getStatus = function () {
+  if (this.status === "playing") {
+    return `Playing: Guesses left: ${this.allowedGuesses}`
+  } else if (this.status === "failed") {
+    return `Failed: Nice try! The word was "${this.word.join("")}".`
+  } else if (this.status === "finished") {
+    return "Finished: Great job! You guessed the word."
+  }
 }
