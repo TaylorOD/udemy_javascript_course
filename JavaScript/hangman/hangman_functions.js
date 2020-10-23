@@ -55,13 +55,16 @@ class Hangman {
 
     return this.status;
   }
-  getStatus() {
-    if (this.status === "playing") {
-      return `Playing: You have ${this.allowedGuesses} guesses remaining.`
-    } else if (this.status === "failed") {
-      return `Failed: Nice try! The word was "${this.word.join("")}".`
-    } else if (this.status === "finished") {
-      return "Finished: Great job! You guessed the word."
+  set status(value) {
+    if (value === "playing") {
+      this._status = `Playing: You have ${this.allowedGuesses} guesses remaining.`
+    } else if (value === "failed") {
+      this._status = `Failed: Nice try! The word was "${this.word.join("")}".`
+    } else if (value === "finished") {
+      this._status = "Finished: Great job! You guessed the word."
     }
+  }
+  get status() {
+    return this._status
   }
 }
