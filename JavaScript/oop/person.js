@@ -37,24 +37,16 @@ class Employee extends Person {
 }
 
 class Student extends Person {
-  constructor(firstName, lastName, age, likes, grade, status) {
+  constructor(firstName, lastName, age, likes, grade) {
     super(firstName, lastName, age, likes)
     this.grade = grade
-    this.status = status
-  }
-  getStatus() {
-    if (this.grade > 70) {
-      this.status = "passing"
-    } else if (this.grade < 70) {
-      this.status = "failing"
-    }
-    return this.status
   }
   getBio() {
-    return `${this.firstName} is ${this.getStatus()} this class.`
+    const status = this.grade >= 70 ? "passing" : "failing"
+    return `${this.firstName} is ${status} this class.`
   }
-  updateGrade(grade) {
-    this.grade += grade
+  updateGrade(change) {
+    this.grade += change
   }
 }
 
