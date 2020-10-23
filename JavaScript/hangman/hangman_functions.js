@@ -5,7 +5,7 @@ class Hangman {
     this.guessedLetters = [];
     this.status = "playing";
   }
-  getPuzzle() {
+  get puzzle() {
     let puzzle = "";
     this.word.forEach((letter) => {
       if (this.guessedLetters.includes(letter) || letter === " ") {
@@ -31,19 +31,11 @@ class Hangman {
       if (isUnique && isBadGuess) {
         this.allowedGuesses -= 1;
       }
-      this.getStatus;
+      this.status;
     }
   }
   calculateStatus() {
-    let finished = true;
-
-    this.word.forEach((letter) => {
-      if (this.guessedLetters.includes(letter)) {
-          
-      } else {
-        finished = false;
-      }
-    });
+    const finished = this.word.every((letter) => this.guessedLetters.includes(letter) || letter === " ")
         
     if (this.allowedGuesses <= 0) {
       this.status = "failed";
@@ -55,16 +47,13 @@ class Hangman {
 
     return this.status;
   }
-  set status(value) {
-    if (value === "playing") {
-      this._status = `Playing: You have ${this.allowedGuesses} guesses remaining.`
-    } else if (value === "failed") {
-      this._status = `Failed: Nice try! The word was "${this.word.join("")}".`
-    } else if (value === "finished") {
-      this._status = "Finished: Great job! You guessed the word."
+  get statusMessage() {
+    if (this.status === "playing") {
+      return `Playing: You have ${this.allowedGuesses} guesses remaining.`
+    } else if (this.status === "failed") {
+      return `Failed: Nice try! The word was "${this.word.join("")}".`
+    } else if (this.status === "finished") {
+      return "Finished: Great job! You guessed the word."
     }
-  }
-  get status() {
-    return this._status
   }
 }

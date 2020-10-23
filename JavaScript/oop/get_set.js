@@ -13,3 +13,21 @@ const data = {
 data.location = "    Chicago    "
 data.location = "new york"
 console.log(data)
+
+
+set puzzle(value) {
+  let _puzzle = "";
+  value.forEach((letter) => {
+    if (this.guessedLetters.includes(letter) || letter === " ") {
+      _puzzle += letter;
+
+    } else {
+      _puzzle += "*";
+
+    }
+  });
+  this._puzzle = value;
+}
+get puzzle() {
+  return this._puzzle;
+}
