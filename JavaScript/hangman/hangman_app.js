@@ -1,3 +1,5 @@
+
+
 const puzzleEl = document.querySelector("#puzzle");
 const guessesEl = document.querySelector("#guesses");
 const statusEl = document.querySelector("#status");
@@ -16,3 +18,15 @@ window.addEventListener("keypress", function (e) {
   statusEl.textContent = hangmanOne.statusMessage;
 
 });
+
+const request = new XMLHttpRequest()
+
+request.addEventListener("readystatechange", (e) => {
+  if (e.target.readyState === 4) {
+    const data = JSON.parse(e.target.responseText)
+    console.log(data)
+  }
+})
+
+request.open("GET", "http://puzzle.mead.io/puzzle")
+request.send()
