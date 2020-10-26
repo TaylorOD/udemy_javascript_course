@@ -27,10 +27,10 @@ getPuzzle("2", (error, puzzle) => {
   }
 })
 
-getCountry("US", (error, countryName) => {
+getCountry("US", (error, country) => {
   if (error) {
     console.log(`Error: ${error}`)
   } else {
-    console.log(countryName)
+    console.log(`Country name: ${country}`)
   }
 })
