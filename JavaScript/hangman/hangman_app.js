@@ -19,13 +19,19 @@ window.addEventListener("keypress", (e) => {
 
 });
 
-getPuzzle((error, puzzle) => {
-  if (error) {
-    console.log(`Error: ${error}`)
-  } else {
-    console.log(puzzle)
-  }
-})
+// getPuzzle((error, puzzle) => {
+//   if (error) {
+//     console.log(`Error: ${error}`)
+//   } else {
+//     console.log(puzzle)
+//   }
+// })
+
+const puzzle = getPuzzleSync()
+console.log(puzzle)
+
+console.log("do something else")
+
 
 // const countryCode = "US"
 // const countryRequest = new XMLHttpRequest()
