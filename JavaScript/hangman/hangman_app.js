@@ -19,7 +19,7 @@ window.addEventListener("keypress", (e) => {
 
 });
 
-getPuzzle((error, puzzle) => {
+getPuzzle("2", (error, puzzle) => {
   if (error) {
     console.log(`Error: ${error}`)
   } else {
@@ -27,22 +27,10 @@ getPuzzle((error, puzzle) => {
   }
 })
 
-// const countryCode = "US"
-// const countryRequest = new XMLHttpRequest()
-
-// countryRequest.addEventListener("readystatechange", (e) => {
-//   if (e.target.readyState === 4 && e.target.status === 200) {
-//     const countryData = JSON.parse(e.target.responseText)
-
-//     countryData.forEach((country) => {
-//       if (country.alpha2Code === countryCode) {
-//         console.log(country.name)
-//       } 
-//     })
-//   } else if (e.target.readyState === 4) {
-//     console.log("An error has taken place.")
-//   }
-// })
-
-// countryRequest.open("GET", "http://restcountries.eu/rest/v2/all")
-// countryRequest.send()
+getCountry("US", (error, countryName) => {
+  if (error) {
+    console.log(`Error: ${error}`)
+  } else {
+    console.log(countryName)
+  }
+})
