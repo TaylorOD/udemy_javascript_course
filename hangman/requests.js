@@ -35,7 +35,5 @@ const getLocation = () => {
     } else {
       throw new Error("Unable to fetch location")
     }
-  }).then((data) => {
-    return `You are located at ${data.city}, ${data.region} ${data.country}`
   })
 }
