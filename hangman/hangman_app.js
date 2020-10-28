@@ -19,11 +19,11 @@ window.addEventListener("keypress", (e) => {
 
 });
 
-// getPuzzle("2").then((puzzle) => {
-//   console.log(puzzle)
-// }).catch((err) => {
-//   console.log(`Error: ${err}`)
-// })
+getPuzzle("2").then((puzzle) => {
+  console.log(puzzle)
+}).catch((err) => {
+  console.log(`Error: ${err}`)
+})
 
 getCountry("US").then((country) => {
   console.log(country)
