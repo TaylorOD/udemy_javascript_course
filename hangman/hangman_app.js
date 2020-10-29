@@ -25,11 +25,17 @@ getPuzzle("2").then((puzzle) => {
   console.log(`Error: ${err}`)
 })
 
-getLocation().then((location) => {
-  console.log(`You are located at ${location.city}, ${location.region} ${location.country}`)
-  return getCountry(location.country)
-}).then((country) => {
-  console.log(country)
-}).catch((err) => {
-  console.log(`Error: ${err}`)
+getCurrentCountry().then((country) => {
+  console.log(country.name)
+}).catch((error) => {
+  console.log(error)
 })
+
+// getLocation().then((location) => {
+//   console.log(`You are located at ${location.city}, ${location.region} ${location.country}`)
+//   return getCountry(location.country)
+// }).then((country) => {
+//   console.log(country)
+// }).catch((err) => {
+//   console.log(`Error: ${err}`)
+// })
