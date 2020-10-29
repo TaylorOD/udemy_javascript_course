@@ -25,15 +25,26 @@ const getCountry = async (countryCode) => {
   }
 }
 
-const getLocation = () => {
-  return fetch("https://ipinfo.io/json?token=82ba852bffd108").then((response) => {
-    if (response.status === 200) {
-      return response.json()
-    } else {
-      throw new Error("Unable to fetch location")
-    }
-  })
+const getLocation = async () => {
+  const response = await fetch("https://ipinfo.io/json?token=82ba852bffd108")
+  
+  if (response.status === 200) {
+    const data = await response.json()
+    return data
+  } else {
+    throw new Error("Unable to fetch location")
+  }
 }
+
+// const getLocationOld = () => {
+//   return fetch("https://ipinfo.io/json?token=82ba852bffd108").then((response) => {
+//     if (response.status === 200) {
+//       return response.json()
+//     } else {
+//       throw new Error("Unable to fetch location")
+//     }
+//   })
+// }
 // const getPuzzleOld = (wordCount) => {
 //   return fetch(`http://puzzle.mead.io/puzzle?wordCount=${wordCount}`).then((response) => {
 //     if (response.status === 200) {
