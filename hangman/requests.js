@@ -25,33 +25,18 @@ const getCountry = async (countryCode) => {
   }
 }
 
-// const getLocation = async () => {
-//   const response = await fetch("https://ipinfo.io/json?token=82ba852bffd108")
-  
-//   if (response.status === 200) {
-//     return response.json()
-//   } else {
-//     throw new Error("Unable to fetch location")
-//   }
-// }
-
-const getCurrentCountry = async () => {
+const getLocation = async () => {
   const response = await fetch("https://ipinfo.io/json?token=82ba852bffd108")
-
+  
   if (response.status === 200) {
-    const currentCountryData = await response.json()
-    return getCountry(currentCountryData.country)
+    return response.json()
   } else {
-    throw new Error("Unable to fetch current location")
-  } 
+    throw new Error("Unable to fetch location")
+  }
 }
 
-
-// getLocation().then((location) => {
-//   console.log(`You are located at ${location.city}, ${location.region} ${location.country}`)
-//   return getCountry(location.country)
-// }).then((country) => {
-//   console.log(country)
-// }).catch((err) => {
-//   console.log(`Error: ${err}`)
-// })
+const getCurrentCountry = async () => {
+  const location = await getLocation()
+  const country = await getCountry(location.country)
+  return country
+}
