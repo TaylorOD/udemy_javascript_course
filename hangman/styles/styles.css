@@ -38,13 +38,15 @@ p {
 
 .puzzle {
   display: flex;
-  margin-bottom: 4.8rem;
+  margin-top: 3.0rem;
+  margin-bottom: 3.0rem;
 }
 
 .button {
   background: #7044a0;
   border: none;
   border-bottom: 2px solid #603a88;
+  margin-top: 2.0rem;
   cursor: pointer;
   color: white;
   font-size: 1.4rem;
@@ -55,4 +57,8 @@ p {
 
 .button:hover {
   background: #5F3A87;
+}
+
+#guesses {
+  
 }
