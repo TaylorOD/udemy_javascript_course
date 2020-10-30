@@ -18,6 +18,3 @@ processData().then((data) => {
 }).catch((error) => {
   console.log("Error", error)
 })
-
-
-
