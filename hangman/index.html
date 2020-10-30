@@ -2,7 +2,9 @@
 
 <html>
 
-  <head></head>
+  <head>
+    <link href="/hangman/styles/styles.css" rel="stylesheet">
+  </head>
   
   <body>
     <script src="/hangman/scripts/hangman_functions.js"></script>
@@ -10,8 +12,8 @@
     <h1>Hangman Game!</h1>
 
     <p id="puzzle"> </p>
-    <p id="guesses"> </p>
-    <p id="status"></p>
+    <p id="guesses" class="warning"> </p>
+    <p id="status" class="warning"></p>
     <button id="reset">Reset</button>
     
     <script src="/hangman/scripts/requests.js"></script>
