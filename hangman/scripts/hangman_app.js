@@ -2,28 +2,36 @@ const puzzleEl = document.querySelector("#puzzle");
 const guessesEl = document.querySelector("#guesses");
 const statusEl = document.querySelector("#status");
 
-let hangmanOne
+let hangmanGame
 
-// puzzleEl.textContent = hangmanOne.puzzle;
-// statusEl.textContent = hangmanOne.statusMessage;
+// puzzleEl.textContent = hangmanGame.puzzle;
+// statusEl.textContent = hangmanGame.statusMessage;
 
 window.addEventListener("keypress", (e) => {
   const guess = String.fromCharCode(e.charCode)
 
-  hangmanOne.makeGuess(guess)
-  hangmanOne.calculateStatus()
+  hangmanGame.makeGuess(guess)
+  hangmanGame.calculateStatus()
   render()
   
 })
 
 const render = () => {
-  puzzleEl.textContent = hangmanOne.puzzle;
-  statusEl.textContent = hangmanOne.statusMessage;
+  // puzzleEl.textContent = hangmanGame.puzzle;
+  puzzleEl.innerHTML = ""
+  statusEl.textContent = hangmanGame.statusMessage;
+
+  hangmanGame.puzzle.split("").forEach((letter) => {
+    const letterEl = document.createElement("span")
+    letterEl.textContent = letter
+    puzzleEl.appendChild(letterEl)
+  })
+
 }
 
 const startGame = async () => {
   const puzzle = await getPuzzle("2")
-  hangmanOne = new Hangman(puzzle, 5)
+  hangmanGame = new Hangman(puzzle, 5)
   render()
 }
 
