@@ -10,20 +10,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
     <script src="/notes_app/scripts/notes_functions.js"></script>
 
-    <div class="header">
+    <header class="header">
         <div class="container">
             <h1 class="header__title">Notes App</h1>
             <h2 class="header__subtitle">Take notes!</h2>
         </div>
+    </header>
+
+    <div class="actions">
+        <div class="actions__container">
+            <input id="search-text" type="text" class="input" placeholder="Filter notes">
+
+            <select id="filter-by" class="dropdown">
+                <option value="byEdited">Sort By Last Edited</option>
+                <option value="byCreated">Sort By Recently Created</option>
+                <option value="alphabetical">Sort Alphabetically</option>
+            </select>        
+        </div>
     </div>
 
-    <input id="search-text" type="text" placeholder="Filter notes">
-
-    <select id="filter-by">
-        <option value="byEdited">Sort By Last Edited</option>
-        <option value="byCreated">Sort By Recently Created</option>
-        <option value="alphabetical">Sort Alphabetically</option>
-    </select>
 
     <div id="notes"></div>
     <button id="create-note">Create New Note</button>
