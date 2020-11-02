@@ -40,13 +40,16 @@ const generateNoteDom = (note) => {
   } else {
     textEl.textContent = "Unnamed Note"
   }
+  textEl.classList.add("list-item__title")
   noteEl.appendChild(textEl)
 
   // Setup the link
   noteEl.setAttribute("href", `/notes_app/edit.html#${note.id}`)
+  noteEl.classList.add("list-item")
 
   // Setup the status message
   statusEl.textContent = updateLastEdited(note.updatedAt)
+  statusEl.classList.add("list-item__subtitle")
   noteEl.appendChild(statusEl)
 
   return noteEl
