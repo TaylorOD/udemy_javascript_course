@@ -31,17 +31,8 @@ const removeNote = (id) => {
 // generate DOM for a note
 const generateNoteDom = (note) => {
   const noteEl = document.createElement("a")
-  const textEl = document.createElement("a")
-  const button = document.createElement("button")
-
-  // setup the remove note button
-  button.textContent = "x"
-  noteEl.appendChild(button)
-  button.addEventListener("click", () => {
-    removeNote(note.id)
-    saveNotes(notes)
-    renderNotes(notes, filters)
-  })
+  const textEl = document.createElement("p")
+  const statusEl = document.createElement("p")
 
   // setup the note title text
   if (note.title.length > 0) {
@@ -49,8 +40,14 @@ const generateNoteDom = (note) => {
   } else {
     textEl.textContent = "Unnamed Note"
   }
-  textEl.setAttribute("href", `/notes_app/edit.html#${note.id}`)
   noteEl.appendChild(textEl)
+
+  // Setup the link
+  noteEl.setAttribute("href", `/notes_app/edit.html#${note.id}`)
+
+  // Setup the status message
+  statusEl.textContent = updateLastEdited(note.updatedAt)
+  noteEl.appendChild(statusEl)
 
   return noteEl
 
