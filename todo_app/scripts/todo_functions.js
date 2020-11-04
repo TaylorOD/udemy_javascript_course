@@ -99,10 +99,10 @@ const renderTodos = (todos, filters) => {
       document.querySelector("#todos").appendChild(generateTodoDOM(todo))
     })
   } else if (filteredTodos.length < 1) {
-    const noTodos = document.createElement("p")
-    noTodos.classList.add("empty-message")
-    noTodos.textContent = "No to-dos to show"
-    document.querySelector("#todos").appendChild(noTodos)
+    const noTodoMessage = document.createElement("p")
+    noTodoMessage.classList.add("empty-message")
+    noTodoMessage.textContent = "No to-dos to show"
+    document.querySelector("#todos").appendChild(noTodoMessage)
   }
 }
 
