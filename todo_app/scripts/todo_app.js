@@ -17,18 +17,21 @@ document.querySelector("#search-text").addEventListener("input", (e) => {
 
 // add new todo - listens to sub box
 document.querySelector("#new-todo-text-form").addEventListener("submit", (e) => {
+  const text = e.target.elements.text.value.trim()
+  
   e.preventDefault()
-  if (e.target.elements.text.value.length > 0) {
+  if (text.length > 0) {
     todos.push({
       id: uuidv4(),
-      text: e.target.elements.text.value.trim(),
+      text: text,
+      // could just write text as shortcut
       completed: false
     })
     saveTodos(todos)
     renderTodos(todos, filters)
     e.target.elements.text.value = ""
   } else {
-    console.log("todo must have content")
+    console.log("Error: todo cannot be empty")
   }
 })
 
