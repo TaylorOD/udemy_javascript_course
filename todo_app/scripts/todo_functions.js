@@ -37,7 +37,8 @@ const toggleCompleted = (id) => {
 
 // Generate DOM Elements for todos
 const generateTodoDOM = (todo) => {
-  const todoEl = document.createElement("div")
+  const todoEl = document.createElement("label")
+  const containerEl = document.createElement("div")
   const textEl = document.createElement("span")
   const removeButton = document.createElement("button")
   const checkbox = document.createElement("input")
@@ -45,7 +46,7 @@ const generateTodoDOM = (todo) => {
   // create checkbox for each
   checkbox.setAttribute("type", "checkbox")
   checkbox.checked = todo.completed
-  todoEl.appendChild(checkbox)
+  containerEl.appendChild(checkbox)
   checkbox.addEventListener("change", () => {
     toggleCompleted(todo.id)
     saveTodos(todos)
@@ -55,16 +56,25 @@ const generateTodoDOM = (todo) => {
 
   // set todo text
   textEl.textContent = todo.text
-  todoEl.appendChild(textEl)
+  containerEl.appendChild(textEl)
+
+
+  // Setup Container
+  todoEl.classList.add("list-item")
+  containerEl.classList.add("list-item__container")
+  todoEl.appendChild(containerEl)
+
 
   // create x/remove button for each todo
-  removeButton.textContent = "x"
+  removeButton.textContent = "remove"
+  removeButton.classList.add("button", "button--text")
   todoEl.appendChild(removeButton)
   removeButton.addEventListener("click", () => {
     removeTodo(todo.id)
     saveTodos(todos)
     renderTodos(todos, filters)
   })
+
 
   return todoEl
 }
