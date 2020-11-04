@@ -102,6 +102,8 @@ const renderTodos = (todos, filters) => {
 // generate summary
 const generateSummaryDOM = (incompleteTodo) => {
   const summary = document.createElement("h4")
-  summary.textContent = `You have ${incompleteTodo.length} todos left`
+  const plural = incompleteTodo.length === 1 ? "" : "s"
+  summary.classList.add("list-title")
+  summary.textContent = `You have ${incompleteTodo.length} todo${plural} left`
   return summary
 }
