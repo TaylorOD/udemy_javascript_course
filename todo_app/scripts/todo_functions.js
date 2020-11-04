@@ -94,9 +94,16 @@ const renderTodos = (todos, filters) => {
   document.querySelector("#todos").innerHTML = ""
   document.querySelector("#todos").appendChild(generateSummaryDOM(incompleteTodo))
 
-  filteredTodos.forEach((todo) => {
-    document.querySelector("#todos").appendChild(generateTodoDOM(todo))
-  })
+  if (filteredTodos.length > 0) {
+    filteredTodos.forEach((todo) => {
+      document.querySelector("#todos").appendChild(generateTodoDOM(todo))
+    })
+  } else if (filteredTodos.length < 1) {
+    const noTodos = document.createElement("p")
+    noTodos.classList.add("empty-message")
+    noTodos.textContent = "No to-dos to show"
+    document.querySelector("#todos").appendChild(noTodos)
+  }
 }
 
 // generate summary
