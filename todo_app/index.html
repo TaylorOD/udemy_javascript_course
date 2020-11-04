@@ -18,11 +18,18 @@
       </div>
     </div>
 
+    <div class="actions">
+      <div class="actions__container">
+        <input id="search-text" class="input" type="text" placeholder="Filter todos">
+        <label class="checkbox">
+          <input id="completed-checkbox" type="checkbox">Hide completed
+        </label>
+      </div>
+    </div>
 
 
-    <script src="/todo_app/scripts/todo_functions.js"></script>
-    <h1> Todos </h1>
-    <input id="search-text" type="text" placeholder="Filter todos">
+    
+    
 
     <div id="todos"></div>
 
@@ -33,14 +40,10 @@
 
 
 
-    <label>
-      Hide completed todos: <input id="completed-checkbox" type="checkbox">
-    </label>
 
 
+    <script src="/todo_app/scripts/todo_functions.js"></script>
     <script src="/todo_app/scripts/todo_app.js"></script>
     <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
-
   </body> 
-
 </html>
