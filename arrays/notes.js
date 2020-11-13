@@ -1,18 +1,19 @@
 // const notes = ["Note 1", "Note 2", "Note 3"]
 
 const notes = [{
-  title: "My next Trip",
-  body: "I would like to go to Spain"
+              title: "My next Trip",
+              body: "I would like to go to Spain"
 
-}, {
-  title: "Coding projects",
-  body: "JavaScript and Ruby"
+            }, {
+              title: "Coding projects",
+              body: "JavaScript and Ruby"
 
-}, {
-  title: "Buy new watch",
-  body: "Gold"
+            }, {
+              title: "Buy new watch",
+              body: "Gold"
 
-}]
+            }];
+
 
 // notes.push("My new note")
 // notes.splice(1, 1, "New second Item")

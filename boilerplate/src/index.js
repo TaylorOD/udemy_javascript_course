@@ -1,10 +1,7 @@
-const name = "Jen"
-console.log(name)
+// import "./utilities.js"
 
-class Hangman {
-  myMethod() {
-    return "Testing"
-  }
-}
-const hangman = new Hangman()
-console.log(hangman.myMethod())
+import { addNumbers } from "./utilities"
+
+console.log("index.js")
+
+console.log(addNumbers(31, 1))
