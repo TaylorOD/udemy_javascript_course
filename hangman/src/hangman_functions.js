@@ -61,4 +61,4 @@ class Hangman {
   // }
 }
 
-export {}
+export { Hangman as default }
