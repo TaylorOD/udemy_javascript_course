@@ -4,17 +4,21 @@
   "description": "",
   "main": "input.js",
   "scripts": {
-    "serve": "live-server public",
-    "build": "webpack --watch"
+    "dev-server": "webpack-dev-server",
+    "start": "webpack-cli serve --mode development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@webpack-cli/init": "^1.0.3",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "live-server": "^1.2.1",
-    "webpack": "^4.5.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
   }
 }

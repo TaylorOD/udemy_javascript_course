@@ -7,7 +7,7 @@ import scream from "./scream"
 
 console.log("index.js")
 
-console.log(addNumbers(31, 1))
+console.log(addNumbers(32, 3))
 
 console.log(scream("blah"))
 
