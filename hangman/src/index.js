@@ -1,8 +1,10 @@
-import { v4 as uuidv4 } from 'uuid';
+import validator from 'validator';
 import Hangman from "./hangman_functions"
 import getPuzzle from "./requests"
 
-console.log(uuidv4())
+console.log(validator.isEmail('dorsetttaylomail.com'))
+
+
 
 const puzzleEl = document.querySelector("#puzzle");
 const guessesEl = document.querySelector("#guesses");
