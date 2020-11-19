@@ -18,3 +18,15 @@ const printTeam = (team, coach, ...players) => {
 }
 
 printTeam("Liberty", "Casey Penn", "Marge", "Aiden", "Herbert", "Sherry", "Todd", "Luke")
+
+
+const printTeamm = (team, coach, ...players) => {
+  // console.log(team)
+  // console.log(coach)
+  // let playersArray = []
+  // players.forEach((player) => playersArray.push((" " + player)))
+  // console.log(playersArray)
+  console.log(`The team is ${team} coached by ${coach} and the players are ${players.join(", ")}.`)
+}
+
+printTeamm("Liberty", "Casey Penn", "Marge", "Aiden", "Herbert", "Sherry", "Todd", "Luke")
