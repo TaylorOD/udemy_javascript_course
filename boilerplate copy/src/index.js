@@ -6,4 +6,15 @@ const calculateAverage = (thing, ...numbers) => {
   return `the average ${thing} is ${average}`
 }
 
-console.log(calculateAverage("grade", 0, 100, 88, 94))
+console.log(calculateAverage("age", 0, 100, 88, 94, 55, 13, 19))
+
+const printTeam = (team, coach, ...players) => {
+  // console.log(team)
+  // console.log(coach)
+  let playersArray = []
+  players.forEach((player) => playersArray.push((" " + player)))
+  // console.log(playersArray)
+  console.log(`The team is ${team} coached by ${coach} and the players are ${playersArray}.`)
+}
+
+printTeam("Liberty", "Casey Penn", "Marge", "Aiden", "Herbert", "Sherry", "Todd", "Luke")
