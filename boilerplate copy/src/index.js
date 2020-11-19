@@ -27,9 +27,10 @@ const printTeamm = (team, coach, ...players) => {
   // players.forEach((player) => playersArray.push((" " + player)))
   // console.log(playersArray)
   console.log(`The team is ${team} coached by ${coach} and the players are ${players.join(", ")}.`)
+  // console.log(firstPlayer, secondPlayer)
 }
 
-printTeamm("Liberty", "Casey Penn", "Marge", "Aiden", "Herbert", "Sherry", "Todd", "Luke")
+// printTeamm("Liberty", "Casey Penn", "Marge", "Aiden", "Herbert", "Sherry", "Todd", "Luke")
 
 const team = {
   name :"Liberty",
@@ -37,3 +38,18 @@ const team = {
   players: ["Marge", "Aiden", "Herbert", "Sherry", "Todd", "Luke"]
 }
 printTeamm(team.name, team.coach, ...team.players)
+
+
+let cities = ["Chicago", "Cape Town", "Memphis"]
+
+const citiesCopy = ["Montptrial", ...cities, "Huston"]
+
+console.log(cities)
+console.log(citiesCopy)
+console.log(citiesCopy[0])
+console.log(citiesCopy)
+// console.log(citiesCopy.push("bob"))
+
+
+cities = [...cities, "Tango"]
+console.log(cities)
