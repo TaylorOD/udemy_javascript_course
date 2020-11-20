@@ -61,9 +61,31 @@ let house = {
 }
 
 let newHouse = {
-  ...house
+  basement: true,
+  ...house,
+  bedrooms: 3
 }
 newHouse.yearBuilt = 2019
 
 console.log(house)
 console.log(newHouse)
+
+let person = {
+  name: "Todd",
+  age: 19
+}
+
+let location = {
+  city: "Chicago",
+  country: "USA"
+}
+
+let overview = {
+  ...person,
+  ...location
+}
+
+
+console.log(person)
+console.log(location)
+console.log(overview)
