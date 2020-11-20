@@ -53,3 +53,17 @@ console.log(citiesCopy)
 
 cities = [...cities, "Tango"]
 console.log(cities)
+
+let house = {
+  bedrooms: 2,
+  bathrooms: 1.5,
+  yearBuilt: 2017
+}
+
+let newHouse = {
+  ...house
+}
+newHouse.yearBuilt = 2019
+
+console.log(house)
+console.log(newHouse)
