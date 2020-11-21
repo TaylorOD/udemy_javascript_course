@@ -90,6 +90,8 @@
 // console.log(location)
 // console.log(overview)
 
+
+
 const todo = {
   id: "soidfoaih",
   text: "Pay the bills",
@@ -102,3 +104,18 @@ console.log(todoText)
 console.log(completed)
 console.log(details)
 console.log(others)
+
+const age = [65, 76, 2]
+
+const [firstAge, secondAge, , lastAge = 100] = age
+
+console.log(firstAge)
+console.log(secondAge)
+console.log(age)
+console.log(firstAge, ...age)
+console.log(lastAge)
+
+const printTodo = ({ text, completed }) => {
+  console.log(`${text}: ${completed}`)
+}
+printTodo(todo)
